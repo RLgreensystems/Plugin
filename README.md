@@ -2,7 +2,7 @@
 
 [![GitHub version](https://badge.fury.io/gh/ohh2ahh%2FAppAvailability.svg)](https://badge.fury.io/gh/ohh2ahh%2FAppAvailability) [![npm version](https://badge.fury.io/js/cordova-plugin-appavailability.svg)](https://badge.fury.io/js/cordova-plugin-appavailability)
 
-A Plugin for Apache Cordova and Adobe PhoneGap by [ohh2ahh](http://ohh2ahh.com).
+A Plugin for Apache Cordova and Adobe PhoneGap by [ohh2ahh](http://ohh2ahh.com) adjusted by RLgreensystems so that the plugin is able to work together with another plugin. only adjusted for android not Ios
 
 1. [Description](https://github.com/ohh2ahh/AppAvailability#1-description)
 2. [Installation](https://github.com/ohh2ahh/AppAvailability#2-installation)
