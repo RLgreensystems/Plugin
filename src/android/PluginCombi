@@ -1,0 +1,27 @@
+public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+
+        if (action.equals("getAppVersion")) {
+
+            try {            
+                PackageManager packageManager = this.cordova.getActivity().getPackageManager();
+
+                JSONObject r = new JSONObject();
+                r.put("version", packageManager.getPackageInfo(this.cordova.getActivity().getPackageName(), 0).versionName);
+                r.put("build", packageManager.getPackageInfo(this.cordova.getActivity().getPackageName(), 0).versionCode);
+
+                callbackContext.success(r);
+            } catch (NameNotFoundException e) {
+                callbackContext.error("Exception thrown");
+            }
+
+            return true;
+        } else if(action.equals("checkAvailability")) {
+            String uri = args.getString(0);
+            this.checkAvailability(uri, callbackContext);
+            return true;
+        }
+
+        // Default response to say the action hasn't been handled
+        return false;
+    }
+
